@@ -1,0 +1,21 @@
+[project]
+name = "hack"
+authors = []
+description = ""
+telemetry = true
+requirements = []
+boot_contracts = ["costs", "pox", "pox-2", "lockup", "costs-2", "cost-voting", "bns"]
+
+[project.cache_location]
+path = "./.cache"
+[contracts.first]
+path = "contracts/first.clar"
+clarity_version = 1
+[repl.analysis]
+passes = ["check_checker"]
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
